@@ -1,0 +1,17 @@
+# Tomcat
+server:
+    port: 8080
+    servlet:
+      context-path: '/mkp'
+
+# mybatis 映射
+mybatis:
+    mapperLocations: classpath:mapper/*.xml
+
+# 数据库
+spring:
+  datasource:
+    url: jdbc:sqlite:makeYourPlan.db
+    driver-class-name: org.sqlite.JDBC
+    username:
+    password:
