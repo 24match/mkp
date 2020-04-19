@@ -40,8 +40,8 @@
       />
       <el-table-column
         align="right">
-        <template slot="header" slot-scope="scope">
-          <el-input
+        <template slot="header">
+          <el-inputz
             v-model="search"
             size="mini"
             placeholder="输入关键字搜索"/>
@@ -84,12 +84,20 @@ export default {
     this.fetchData()
   },
   methods: {
+    // 获取表格数据
     fetchData() {
       this.listLoading = false
       fetchAccount().then(response => {
         this.account = response.data.account
         this.listLoading = false
-        console.log(response.data.account)
+      })
+    },
+    // 删除按钮
+    handleDelete(row) {
+      this.$confirm('请确定是否删除?', '确认信息', {
+        distinguishCancelAndClose: true,
+        confirmButtonText: '删除',
+        cancelButtonClass: '取消'
       })
     }
   }

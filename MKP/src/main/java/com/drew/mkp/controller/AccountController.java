@@ -46,6 +46,7 @@ public class AccountController {
 
     /**
      * 修改用户信息
+     *
      * @return
      */
     @PostMapping("/updateAccount")
@@ -56,6 +57,7 @@ public class AccountController {
 
     /**
      * 删除用户信息
+     *
      * @param id
      * @return
      */

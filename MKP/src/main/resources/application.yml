@@ -11,7 +11,7 @@ mybatis:
 # 数据库
 spring:
   datasource:
-    url: jdbc:sqlite:makeYourPlan.db
+    url: jdbc:sqlite:D:/IDEAWorkplace/MKPProject/MKP/makeYourPlan.db
     driver-class-name: org.sqlite.JDBC
     username:
     password:

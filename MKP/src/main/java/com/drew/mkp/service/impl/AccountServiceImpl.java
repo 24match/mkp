@@ -26,7 +26,6 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public Result selectAccout() {
         JSONObject jsonObject = new JSONObject();
-
         List list = accountMapper.selectList(null);
         jsonObject.put("account", list);
 
@@ -46,6 +45,7 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public int updateAccount(Account account) {
         return accountMapper.updateById(Account.builder()
+                .id(account.getId())
                 .username(account.getUsername())
                 .password(account.getPassword())
                 .isadmin(account.getIsadmin())
