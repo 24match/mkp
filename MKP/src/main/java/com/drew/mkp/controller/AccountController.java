@@ -39,7 +39,6 @@ public class AccountController {
      * @return
      */
     @PostMapping("/addAccount")
-    @Transactional
     public Result<Integer> addAccount(Account account) {
         return Result.success(accountService.addAccount(account));
     }
@@ -50,7 +49,6 @@ public class AccountController {
      * @return
      */
     @PostMapping("/updateAccount")
-    @Transactional
     public Result updateAccount(Account account) {
         return Result.success(accountService.updateAccount(account));
     }
@@ -62,7 +60,6 @@ public class AccountController {
      * @return
      */
     @PostMapping("/removeAccount")
-    @Transactional
     public Result removeAccount(Integer id) {
         return Result.success(accountService.removeAccount(id));
     }
